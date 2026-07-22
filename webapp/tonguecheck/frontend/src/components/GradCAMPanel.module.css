@@ -1,0 +1,55 @@
+.panel { border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
+
+.header    { padding: 16px 18px; border-bottom: 1px solid var(--border); }
+.titleRow  { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; }
+.title     { font-size: 14px; font-weight: 500; }
+.badge     { font-size: 10px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; background: #EEF3FB; color: #185FA5; padding: 2px 8px; border-radius: 4px; }
+.subtitle  { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* Prediction result row */
+.predRow { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 8px; }
+.predPos { background: #FAEBE9; }
+.predNeg { background: #E7F3ED; }
+.predLeft { display: flex; align-items: center; gap: 10px; }
+.predBadge { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; padding: 4px 12px; border-radius: 100px; }
+.predBadgePos { background: var(--danger-lt); color: var(--danger); }
+.predBadgeNeg { background: var(--accent-lt); color: var(--accent); }
+.predDot  { width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+.predConf { font-size: 13px; font-weight: 500; color: var(--text); }
+.predLabel { font-size: 12px; color: var(--muted); font-style: italic; }
+
+/* Tabs */
+.tabs { display: flex; border-bottom: 1px solid var(--border); padding: 0 18px; }
+.tab  { padding: 10px 14px; font-size: 13px; color: var(--muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; margin-bottom: -1px; transition: color .15s, border-color .15s; }
+.tab:hover  { color: var(--text); }
+.tabActive  { color: var(--accent) !important; border-bottom-color: var(--accent) !important; font-weight: 500; }
+
+/* Image */
+.imgWrap    { padding: 14px 18px 6px; }
+.img        { width: 100%; border-radius: var(--radius); display: block; }
+.imgCaption { font-size: 12px; color: var(--muted); margin-top: 7px; text-align: center; }
+
+/* Strip */
+.strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; padding: 8px 18px 14px; }
+.thumb { background: none; border: 1.5px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; cursor: pointer; padding: 0; transition: border-color .15s; display: flex; flex-direction: column; }
+.thumb:hover  { border-color: var(--accent); }
+.thumbActive  { border-color: var(--accent) !important; }
+.thumbImg     { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.thumbLabel   { font-size: 10px; text-align: center; padding: 4px 2px; color: var(--muted); font-weight: 500; background: var(--bg); }
+.thumbActive .thumbLabel { color: var(--accent); }
+
+/* Legend */
+.legend       { padding: 0 18px 18px; }
+.legendBar    { height: 10px; border-radius: 5px; margin-bottom: 5px; background: linear-gradient(to right,#00008B,#0000FF,#00FFFF,#00FF00,#FFFF00,#FF7F00,#FF0000); }
+.legendLabels { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-bottom: 8px; }
+.legendNote   { font-size: 12px; color: var(--muted); line-height: 1.5; padding: 10px 12px; background: var(--bg); border-radius: var(--radius-sm); }
+
+/* Utils */
+.center { padding: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.ring   { width: 36px; height: 36px; border: 2.5px solid var(--accent-lt); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; display: block; }
+.center p { font-size: 13px; color: var(--muted); }
+.errorBox { margin: 14px 18px; padding: 12px 16px; border-radius: var(--radius-sm); border: 1px solid #F2BBBB; background: var(--danger-lt); }
+.errorBox strong { display: block; font-size: 13px; font-weight: 500; color: var(--danger); margin-bottom: 3px; }
+.errorBox p { font-size: 12px; color: var(--danger); }
+.empty { padding: 2rem 18px; text-align: center; }
+.empty p { font-size: 13px; color: var(--muted); }

@@ -1,0 +1,18 @@
+.zone {
+  border: 1.5px dashed var(--border); border-radius: var(--radius-lg);
+  background: var(--surface); padding: 2.5rem 1.5rem; text-align: center;
+  cursor: pointer; transition: border-color .18s, background .18s; user-select: none;
+}
+.zone:hover, .over { border-color: var(--accent); background: var(--accent-lt); }
+.disabled          { opacity:.45; pointer-events:none; }
+
+.icon {
+  width:50px; height:50px; border-radius:50%;
+  background:var(--bg); border:1px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 1rem; color:var(--muted);
+  transition:color .18s, border-color .18s;
+}
+.zone:hover .icon, .over .icon { color:var(--accent); border-color:var(--accent); }
+.primary { font-size:15px; font-weight:500; margin-bottom:5px; }
+.hint    { font-size:12px; color:var(--muted); }
